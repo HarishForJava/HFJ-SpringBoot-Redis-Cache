@@ -1,13 +1,13 @@
-#Running Spring Boot Redis Cache Application
-##Spring web service of a CRUD of bookmarker using Spring JPA, Spring MVC and Spring Boot, including GET, PUT, POST and DELETE operations for a bookmarker entity.
+# Running Spring Boot Redis Cache Application
+## Spring web service of a CRUD of bookmarker using Spring JPA, Spring MVC and Spring Boot, including GET, PUT, POST and DELETE operations for a bookmarker entity.
 
    Spring have now devised a simple to use caching system based around a couple of annotations
 
-#@EnableCaching 
+# @EnableCaching 
 
    EnableCaching annotation triggers a post processor that inspects every Spring bean for the presence of caching annotations on public methods. If such an annotation is found, a proxy is automatically created to intercept the method call and handle the caching behavior 
 
-#@Cacheable:
+# @Cacheable:
 
 @Cacheable on the method which you want to cache
 which will mark the method return values that will be stored in the cache without hitting the method 2nd time if data is available.
@@ -18,7 +18,7 @@ which will mark the method return values that will be stored in the cache withou
    Key		: based on this data will be cached and it is optional
    Condition:  based on the condition data will be cached. In example if the id < 10 then only data will be cached otherwise won’t. it is optional
 
-#@CacheEvict:
+# @CacheEvict:
 
 @CacheEvict annotation will be used to delete the data from existing cache.
 
@@ -31,7 +31,7 @@ CacheEvict has 5 attributes:
    5 beforeInvocation	: is Boolean type and will delete the cache before the method execution
 
 
-#@CachePut:
+# @CachePut:
 
 @CachePut on the method which you want to be updated with the result of the method execution.
 
@@ -42,7 +42,7 @@ CacheEvict has 5 attributes:
    Condition:  based on the condition data will be cached. In example if the id < 10 then only data will be cached otherwise won’t. it is optional
    
 
-##How to run
+## How to run
 
 1. Clone the repository.
 
@@ -64,7 +64,7 @@ mysql> create database test;
 
 The app will start running at http://localhost:8080.
 
-##Configuring Redis Cache
+## Configuring Redis Cache
 
 With Spring Boot and the required dependency already in work with Maven, we can configure local Redis instance with only three lines in our application.properties:
 
